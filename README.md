@@ -1,19 +1,30 @@
 # ToDo
 
-#### Run black
-> python -m black .
+⋅⋅⋅La app esta usando SQLite para almacenar los datos.
 
-#### flake8 
-> flake8 
+⋅⋅⋅El codigo se encuentra en src/, dentro existe el modulo tasks y las rutas inician en controllers.py
 
-#### Run Tests
-> pytest
+#### Formateo de Código:
+```bash
+python -m black .
+```
 
+#### Linter: 
+```bash
+flake8 
+```
 
+#### Para ejecutar las pruebas:
+```bash
+pytest
+```
+
+#### Para ejecutar la aplicación en Docker:
 ```bash
 docker build -t todo-app .
 docker run -d --name fastapi-container -p 8000:8000 todo-app
 ```
 
-### Ingresa a
-[http://0.0.0.0:8000/tasks/](http://0.0.0.0:8000/tasks/)
+#### Ingresa a
+[/docs](http://0.0.0.0:8000/docs)
+[/tasks/](http://0.0.0.0:8000/tasks/)
