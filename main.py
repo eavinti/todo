@@ -1,4 +1,3 @@
-# main.py
 from fastapi import FastAPI
 
 from src.tasks.controllers import router as task_router

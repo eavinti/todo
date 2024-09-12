@@ -1,4 +1,3 @@
-# src/infrastructure/db/repository.py
 from typing import List
 from sqlalchemy.orm import Session
 from src.tasks.infrastructure.db.models import TaskORM

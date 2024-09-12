@@ -1,4 +1,3 @@
-# src/application/task_manager.py
 from typing import List
 from src.tasks.core.models import Task
 from src.tasks.infrastructure.db.repository import TaskRepository
