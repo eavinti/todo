@@ -53,21 +53,19 @@ def test_list_tasks(task_manager):
 
 
 def test_get_task_by_id(task_manager):
-    task = task_manager.create_task("Test Task", "Task description")
-    print("==================== ", task.id)
+    task_manager.create_task("Test Task", "Task description")
     retrieved_task = task_manager.get_task_by_id(task_id=0)
 
     assert retrieved_task is not None
     assert retrieved_task.title == "Test Task"
     assert retrieved_task.description == "Task description"
 
-    # Intentar obtener una tarea que no existe
     non_existent_task = task_manager.get_task_by_id(task_id=999)
     assert non_existent_task is None
 
 
 def test_update_task(task_manager):
-    task = task_manager.create_task("Test Task", "Task description")
+    task_manager.create_task("Test Task", "Task description")
     updated_task = task_manager.update_task(
         task_id=0,
         title="Updated Task",
@@ -80,7 +78,6 @@ def test_update_task(task_manager):
     assert updated_task.description == "Updated description"
     assert updated_task.completed is True
 
-    # Intentar actualizar una tarea que no existe
     non_existent_update = task_manager.update_task(
         task_id=999, title="Non-existent", description="Non-existent", completed=False
     )
@@ -88,7 +85,7 @@ def test_update_task(task_manager):
 
 
 def test_delete_task(task_manager):
-    task = task_manager.create_task("Test Task", "Task description")
+    task_manager.create_task("Test Task", "Task description")
     delete_result = task_manager.delete_task(task_id=0)
     assert delete_result is True
 

@@ -1,7 +1,10 @@
 # ToDo
 
-### Run black
+#### Run black
 > python -m black .
 
-### Run Tests
+#### flake8 
+> flake8 
+
+#### Run Tests
 > pytest
