@@ -11,9 +11,11 @@ BASE = declarative_base()
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
+
 # Función para inicializar la base de datos y crear las tablas
 def init_db():
     BASE.metadata.create_all(bind=engine)
+
 
 # Dependencia para obtener la sesión de la base de datos
 def get_db():

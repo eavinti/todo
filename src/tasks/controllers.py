@@ -7,11 +7,13 @@ from settings.db import get_db
 
 router = APIRouter()
 
+
 @router.post("/tasks/")
 def create_task(title: str, description: str, db: Session = Depends(get_db)):
     task_repo = TaskRepository(db)
     task_manager = TaskManager(task_repo)
     return task_manager.create_task(title, description)
+
 
 @router.get("/tasks/")
 def list_tasks(db: Session = Depends(get_db)):
@@ -29,8 +31,15 @@ def get_task(task_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Task not found")
     return task
 
+
 @router.put("/tasks/{task_id}")
-def update_task(task_id: int, title: str, description: str, completed: bool, db: Session = Depends(get_db)):
+def update_task(
+    task_id: int,
+    title: str,
+    description: str,
+    completed: bool,
+    db: Session = Depends(get_db),
+):
     task_repo = TaskRepository(db)
     task_manager = TaskManager(task_repo)
     task = task_manager.update_task(task_id, title, description, completed)
