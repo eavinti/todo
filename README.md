@@ -1,8 +1,8 @@
 # ToDo
 
-⋅⋅⋅La app esta usando SQLite para almacenar los datos.
-
-⋅⋅⋅El codigo se encuentra en src/, dentro existe el modulo tasks y las rutas inician en controllers.py
+> La app esta usando SQLite para almacenar los datos.
+>
+> El codigo se encuentra en src/, dentro existe el modulo tasks y las rutas inician en controllers.py
 
 #### Formateo de Código:
 ```bash
