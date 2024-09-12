@@ -26,5 +26,5 @@ docker run -d --name fastapi-container -p 8000:8000 todo-app
 ```
 
 #### Ingresa a
-[/docs](http://0.0.0.0:8000/docs)
-[/tasks/](http://0.0.0.0:8000/tasks/)
+- [/docs](http://0.0.0.0:8000/docs)
+- [/tasks/](http://0.0.0.0:8000/tasks/)
